@@ -74,7 +74,21 @@ public class Musician { // AbstractMusician
 
     public void play() {
 	for (Instrument instrument : instruments) {
-	    System.out.println(name + " is playing " + instrument.getName());
+	    NoisyInstrument noisy = (NoisyInstrument) instrument;
+	    System.out.println(name + " is playing " + instrument.getName()
+		    + " (" + noisy.makeNoise() + ")");
+//	    if (instrument instanceof WindInstrument) {
+//		WindInstrument windInstrument = (WindInstrument) instrument;
+//		System.out.println(name + " is playing " + instrument.getName()
+//			+ " (" + windInstrument.makeNoise() + ")");
+//	    } else if (instrument instanceof StringInstrument) {
+//		StringInstrument stringInstrument = (StringInstrument) instrument;
+//		System.out.println(name + " is playing " + instrument.getName()
+//			+ " (" + stringInstrument.makeNoise() + ")");
+//	    } else {
+//		System.out
+//			.println(name + " is playing " + instrument.getName());
+//	    }
 	}
     }
 //    public Musician(String name, Object dummy) {

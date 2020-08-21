@@ -1,6 +1,8 @@
 package fr.formation.musicians;
 
-public abstract class Instrument {
+public abstract class Instrument /*
+				  * implements WindInstrument, StringInstrument
+				  */ {
 
     private String name;
 

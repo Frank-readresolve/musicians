@@ -1,6 +1,7 @@
 package fr.formation.musicians;
 
-public class Saxophone extends Instrument {
+//"IS A" vs "HAS A"
+public class Saxophone extends Instrument implements WindInstrument {
 
     public Saxophone(String name) {
 	super(name);
@@ -9,5 +10,10 @@ public class Saxophone extends Instrument {
     @Override
     public String use() {
 	return getName();
+    }
+
+    @Override
+    public String makeNoise() {
+	return "fffff";
     }
 }
